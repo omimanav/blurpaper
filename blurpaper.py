@@ -17,7 +17,6 @@ while not done:
 	try:
 		image = Image.open(path)
 		bg = image.crop((((image.width-image.width*0.8)//2) , (image.height-image.height*0.8)//2, (image.width+image.width*0.8)//2, (image.height+image.height*0.8)//2))
-		bg.show()
 		bg = bg.resize((2560, int(2560//(image.width/image.height))))
 		try:
 			blur = int(input("Select a level of blur to apply on the background:\n1: None\n2: Low\n3: Medium\n4: High\n>>> "))
